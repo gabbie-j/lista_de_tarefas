@@ -10,10 +10,13 @@ def listar_tarefas(lista_de_tarefas):
   print('=' * 50)
   print(f"{' ' * 17}LISTA DE TAREFAS{' ' * 20}")
   print('-' * 50)
-  n = 1
-  for tarefa in lista_de_tarefas:
-    print(f'{n} - {tarefa}')
-    n += 1
+  if len(lista_de_tarefas) == 0:
+    print('\033[0m\033[32mLista de tarefas vazia.\033[32m\033[0m')
+  else:
+    n = 1
+    for tarefa in lista_de_tarefas:
+      print(f'{n} - {tarefa}')
+      n += 1
   print('-' * 50)
 
 def exibir_menu():
